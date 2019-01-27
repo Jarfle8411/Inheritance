@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Inheritance
+{
+    class Inheritance
+    {
+        static void Main(string[] args)
+        {
+            // instantiation of classes
+            Feline fFeline = new Feline();
+            Dog cDog = new Dog();
+            Lion cLion = new Lion();
+
+            // calling class lion and feline to print to the console 
+            // the Roar and Boxey Method
+            cLion.Roar();
+            fFeline.Boxey();
+            
+        }
+    }
+}
+//==============================================================================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Inheritance
+{
+    public class Mamal
+    {
+        public bool HasBackBone = true;
+        public bool HasHair = true;
+    }
+}
+ //============================================================================================================================
+ 
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Inheritance
+{
+    // Feline has inherited the Mamal class
+    // Meaning it has all the properties of Mamal
+    class Feline : Mamal
+    {
+        public bool HasClaws = true;
+
+        public void Boxey()
+        {
+            Console.WriteLine("Bingo");
+        }
+    }
+}
+ //==============================================================================================================================
+ 
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Inheritance
+{
+    class Lion : Feline
+    {
+        public void Roar()
+        {
+            Console.WriteLine("ROAR");
+        }
+    }
+}
+
+//==============================================================================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Inheritance
+{
+    class Dog : Mamal
+    {
+        public bool CanBark = true;
+    }
+}
